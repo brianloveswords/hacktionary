@@ -1,0 +1,18 @@
+{ "name": "hacktionary"
+, "description": ""
+, "version": "0.0.1"
+, "private": true
+, "dependencies":
+  { "express": "2.5.x"
+  , "request": "2.9.x"
+  , "hogan.js": "1.0.x"
+  , "underscore": "1.3.x"
+  , "mocha": "0.11.x"
+  , "should": "0.5.x"
+  , "up": "0.1.x"
+  , "jsdom": "0.2.x" 
+  , "colors": "*"
+  }
+, "engines":
+  { "node":  "*" }
+}
