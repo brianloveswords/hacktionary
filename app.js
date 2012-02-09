@@ -13,12 +13,20 @@ app.use(function(req, res, next) {
 });
 
 app.get('/term/html/:element', function (req, res) {
-  var thing = elements[req.param('element')]
+  var term = req.param('element')
+    , thing = elements[term];
   res.contentType('json');
   if (thing) {
-    res.send({definition: thing}, 200);
+    res.send({
+      term: term,
+      definition: thing,
+      attribution: {
+        license: 'CC-BY-NC',
+        link:'http://html5doctor.com/element-index/#' + term
+      }
+    }, 200);
   } else {
-    res.send({definition: 'not found'}, 404);
+    res.send({term: term, definition: 'not found'}, 404);
   }
 });
 
