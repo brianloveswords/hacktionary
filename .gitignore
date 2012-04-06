@@ -1,2 +1,3 @@
 node_modules
 mdn-cache/*.html
+webxray-strings.json
