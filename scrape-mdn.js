@@ -35,7 +35,7 @@ function processNextProperty() {
   } else {
     var jsonFilename = 'css-properties.json';
     console.log("Done. Writing " + jsonFilename + ".");
-    fs.writeFileSync(jsonFilename, JSON.stringify(properties));
+    fs.writeFileSync(jsonFilename, JSON.stringify(properties, null, "  "));
   }
 }
 
