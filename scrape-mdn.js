@@ -8,7 +8,7 @@ var propertiesLeft = mdn.cssProperties.slice();
 function processNextProperty() {
   if (propertiesLeft.length) {
     var name = propertiesLeft.pop();
-    var filename = mdn.cachedPropertyFilename(name);
+    var filename = mdn.cachedCssPropertyFilename(name);
     var fileData = fs.readFileSync(filename).toString();
 
     console.log("scraping", name);
